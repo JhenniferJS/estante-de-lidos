@@ -19,7 +19,7 @@ public class MainServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		String actionParameter = request.getParameter("action");
-		String className = "br.com.testing.university.application.controller.action.".concat(actionParameter);
+		String className = "br.inatel.estantedelidos.controller.action.".concat(actionParameter);
 
 		Actions actions;
 
@@ -36,7 +36,8 @@ public class MainServlet extends HttpServlet {
 		
 		if(typeAndAddress[0].equals("forward")) {
 			
-			RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/views/".concat(typeAndAddress[1]));
+//			RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/views/".concat(typeAndAddress[1]));
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("views/".concat(typeAndAddress[1]));
 			requestDispatcher.forward(request, response);
 		} else {
 			response.sendRedirect(typeAndAddress[1]);

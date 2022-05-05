@@ -1,0 +1,488 @@
+html{
+    height: 100%;
+}
+
+/* header */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: #FAF4FF;
+}
+
+header{
+    padding: 20px 100px;
+    height: 170px;
+    background: #926FF6;
+}
+
+.img-cabecalho{
+    position: absolute;
+    display: inline;
+    top: 50px;
+}
+
+.img-logo{
+    width: 300px;
+    height: 70px;
+}
+
+nav {
+    position: absolute;
+    right: 100px;
+    top: 100px;
+}
+
+.anunciar{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.anunciar:hover {
+    color: yellow;
+}
+
+/* footer */
+
+footer{
+    position: absolute;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin-top: auto;
+    background: #333333;
+}
+
+.recorte-footer{
+    margin-top: 100px;
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    left: 0px;
+    bottom: 500px;
+    background: #FAF4FF;
+}
+
+.conteudo-footer{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    background: #333333;
+}
+
+.img-footer{
+    display: inline;
+    vertical-align: middle;
+}
+
+.linha-footer{
+    display: inline;
+    width: 81px;
+    height: 0px;
+    vertical-align: text-top;
+
+    border: 1px solid #FFFFFF;
+    transform: rotate(90deg);
+}
+
+.endereco-footer{
+    display: inline-block;
+    width: 310px;
+    height: 100px;
+    vertical-align: middle;
+    text-align: justify;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+
+    color: #FFFFFF;
+}
+
+.conteudo-endereco{
+    margin: 0 0.5%;
+}
+
+/* main */
+
+main{
+    position: static;
+    margin: 149px 0 149px 0;
+}
+
+.conteudo-main{
+    position: relative;
+}
+
+.titulo{
+    top: 0px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 110.5%;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #4F4F4F;
+}
+
+.opcoes{
+    position: relative;
+    margin: 80px 28%;
+}
+
+.livro{
+    position: absolute;
+    width: 330px;
+    height: 271px;
+    left: calc(50% - 770px/2);
+
+    background: #FFFFFF;
+    box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.05), 0px 1px 3px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+.livro:hover,
+.material:hover{
+    transform: scale(1.04);
+}
+
+.material{
+    position: absolute;
+    width: 330px;
+    height: 271px;
+    left: calc(50% - 770px/2 + 440px);
+
+    background: #FFFFFF;
+    box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.05), 0px 1px 3px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+.svg-livro{
+    position: absolute;
+    width: 54.55px;
+    height: 54.55px;
+    left: 137.7px;
+    top: 73px;
+
+    background: #79CFFF;
+    border-radius: 113.639px;
+}
+
+.svg-material{
+    position: absolute;
+    width: 54.55px;
+    height: 54.55px;
+    left: 137.7px;
+    top: 73px;
+
+    background: #F3849F;
+    border-radius: 113.639px;
+}
+
+.titulo-livro{
+    position: absolute;
+    width: 122px;
+    height: 14.21px;
+    left: 104px;
+    top: 145px;
+    
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16.5825px;
+    line-height: 71.5%;
+    
+    text-align: center;
+    letter-spacing: 0.03em;
+    
+    color: #4F4F4F;
+}
+
+.titulo-material{
+    position: absolute;
+    width: 152px;
+    height: 14px;
+    left: 89px;
+    top: 145px;
+    
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16.5825px;
+    line-height: 71.5%;
+    
+    text-align: center;
+    letter-spacing: 0.03em;
+    
+    color: #4F4F4F;
+}
+
+.legenda{
+    position: absolute;
+    width: 220px;
+    height: 29px;
+    left: 53px;
+    top: 170px;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: #4F4F4F; 
+}
+
+/* pagina anunciar */
+
+form{
+    position: absolute;
+    width: 475px;
+    top: calc(50% - 400px/2);
+    left: calc(50% - 475px/2);
+    text-align: center;
+}
+
+fieldset{
+    margin-bottom: 30px;
+}
+
+.label-padrao,
+form legend{
+    display: block;
+    margin: 18px 0 18px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    color: #4F4F4F;
+}
+
+.label-livro{
+    position: relative;
+    left: -70px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: #52575C;
+}
+
+.label-material{
+    position: relative;
+    left: 70px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: #52575C;
+}
+
+
+.input-padrao{
+    width: 417px;
+    height: 58px;
+    border: 2px solid #6750A4;
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin: 0 0 19px;
+
+    padding-left: 10px;
+    align-items: center;
+    letter-spacing: 0.5px;
+    color: #636167;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.input-valor{
+    width: 204px;
+    height: 58px;
+    border: 2px solid #6750A4;
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin: 0 0 19px;
+    position: relative;
+    left: -55px;
+
+    padding-left: 10px;
+    align-items: center;
+    letter-spacing: 0.5px;
+    color: #636167;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.radio{
+    width: 28px;
+    height: 28px;
+    vertical-align: text-bottom;
+}
+
+#gratis{
+    position: relative;
+    right: -55px;
+    width: 26px;
+    height: 26px;
+    vertical-align: text-bottom;
+}
+
+.label-gratis{
+    position: relative;
+    width: 68px;
+    right: -55px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 16px;
+    align-items: center;
+    text-align: right;
+    letter-spacing: 0.4px;
+    color: #49454F;
+}
+
+.enviar{
+    width: 94px;
+    height: 40px;
+    background: #6750A4;
+    border-radius: 100px;
+    border: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    margin-top: 20px;
+}
+
+.enviar:hover{
+    transform: scale(1.04);
+}
+
+/* livros */
+
+.lista-itens{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.item-livro{
+    position: relative;
+    width: 371px;
+    height: 390px;
+    left: calc(50% - 371px/2);
+    top: calc(50% - 1528px/2);
+
+    background: #79CFFF;
+    box-shadow: 0px 2.29382px 4.58764px rgba(0, 0, 0, 0.2);
+}
+
+.item-material{
+    position: relative;
+    width: 371px;
+    height: 390px;
+    left: calc(50% - 371px/2);
+    top: calc(50% - 1528px/2);
+
+    background: #F3849F;
+    box-shadow: 0px 2.29382px 4.58764px rgba(0, 0, 0, 0.2);
+}
+.item-livro:hover, .item-material:hover{
+    transform: scale(1.02);
+}
+
+.logo-livros{
+    position: absolute;
+    width: 72px;
+    height: 56px;
+    left: 25px;
+    top: 17px;
+}
+
+.nome-livro{
+    position: absolute;
+    width: 263px;
+    height: 36px;
+    left: 25px;
+    top: 160px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+
+    color: #FFFFFF;
+}
+
+.svg-porquinho{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 25px;
+    top: 243px;
+}
+
+.span-preco{
+    position: absolute;
+    width: 353px;
+    height: 97px;
+    left: 97px;
+    top: 253px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #FFFFFF;
+}
+
+.svg-whats{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 28px;
+    top: 323px;
+
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    color: #FFFFFF;
+}
+
+.span-telefone{
+    position: absolute;
+    width: 147px;
+    height: 66px;
+    left: 0px;
+    top: 0px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+
+    color: #FFFFFF;
+}
+
+.telefone-nome{
+    position: absolute;
+    width: 259px;
+    height: 61px;
+    left: 97px;
+    top: 312px;
+}
+
+.telefone-nome p{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+
+    color: #FFFFFF;
+}
