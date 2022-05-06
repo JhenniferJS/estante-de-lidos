@@ -1,3 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
@@ -57,7 +61,7 @@
                 </svg>                    
                 <section class="endereco-footer">
                     <p class="conteudo-endereco">Av. João de Camargo, 510</p>
-                    <p class="conteudo-endereco">Centro, Santa Rita do Sapucaí, MG</p>
+                    <p class="conteudo-endereco">Centro, Santa Rita do Sapucaí­, MG</p>
                     <p class="conteudo-endereco">37540-000</p>
                 </section>
             </div>

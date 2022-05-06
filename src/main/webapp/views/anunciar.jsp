@@ -1,3 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
     <head>
@@ -23,26 +27,26 @@
                 <fieldset>
                     <legend>O que você deseja anunciar?</legend>
                     <label for="radio-livro" class="label-livro">
-                        <input type="radio" name="produto" value="livro" id="radio-livro" class="radio">Livro</label>
+                        <input type="radio" name="produto-tipo" value="livro" id="radio-livro" class="radio">Livro</label>
 
                     <label for="radio-material" class="label-material">
-                        <input type="radio" name="produto" value="material" id="radio-material" class="radio">Material didático</label>
+                        <input type="radio" name="produto-tipo" value="material" id="radio-material" class="radio">Material didático</label>
                 </fieldset>
 
                 <label for="nome" class="label-padrao">Qual o nome do conteúdo?</label>
-                <input type="text" id="nome" class="input-padrao" placeholder="Nome do conteúdo" required>
+                <input type="text" id="nome" class="input-padrao" name="produto-nome" placeholder="Nome do conteúdo" required>
 
                 <label for="valor" class="label-padrao">Qual o valor do conteúdo?</label>
 
                 <section>
-                    <input type="text" id="valor" placeholder="Valor" class="input-valor">
-                    <input type="checkbox" id="gratis">
+                    <input type="text" id="valor" placeholder="Valor" name="produto-valor" class="input-valor">
+                    <input type="checkbox" id="gratis" name="produto-gratis">
                     <label for="gratis" class="label-gratis">Grátis</label>
                 </section>
 
                 <label for="contato" class="label-padrao">Deixe seu contato para venda</label>
-                <input type="text" id="contato-nome" placeholder="Nome" class="input-padrao">
-                <input type="text" id="contato-telefone" placeholder="Telefone" class="input-padrao">
+                <input type="text" id="contato-nome" placeholder="Nome" class="input-padrao" name="vendedor-nome">
+                <input type="text" id="contato-telefone" placeholder="Telefone" class="input-padrao" name="telefone">
 
                 <input type="submit" value="Salvar" class="enviar">
             </form>
@@ -60,7 +64,7 @@
                 </svg>                    
                 <section class="endereco-footer">
                     <p class="conteudo-endereco">Av. João de Camargo, 510</p>
-                    <p class="conteudo-endereco">Centro, Santa Rita do Sapucaí­, MG</p>
+                    <p class="conteudo-endereco">Centro, Santa Rita do Sapucaí, MG</p>
                     <p class="conteudo-endereco">37540-000</p>
                 </section>
             </div>
