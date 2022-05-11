@@ -11,15 +11,15 @@
 		<maven.compiler.version>3.5.1</maven.compiler.version>
 		<maven.war.version>3.0.0</maven.war.version>
 		<jstl.version>1.2</jstl.version>
-		<mysql.version>8.0.27</mysql.version>
+		<mysql.version>8.0.29</mysql.version>
 	</properties>
 
 	<dependencies>
-		<dependency>
+		<!--<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>${mysql.version}</version>
-		</dependency>
+		</dependency>  -->
 
 		<dependency>
 			<groupId>jstl</groupId>

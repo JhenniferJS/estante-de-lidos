@@ -18,11 +18,13 @@ public class AccessDataBase {
     private static final String USER = "root";
     //Senha
     private static final String PASSWORD = "inatel@123";
-
-    public static Connection connectToDb() {
+    
+    public static Connection connectToDb() throws ClassNotFoundException{
         //objeto responsavel pela conexao com o servidor do banco de dados
+    	System.out.println("Entrou na funcao connectToDb");
         Connection con = null;
         try {
+        	Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection(URL, USER, PASSWORD);
             System.out.println(con);
             System.out.println("Conexao realizada com sucesso! ");

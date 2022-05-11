@@ -19,7 +19,7 @@
                 <img class="img-logo" src="../images/logo.png" alt="Logo Estante de Lidos">
             </h1>
             <nav>
-                <a class="anunciar" href="anunciar.html">ANUNCIAR</a>
+                <a class="anunciar" href="anunciar.jsp">ANUNCIAR</a>
             </nav>
         </header>
         <main>

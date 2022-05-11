@@ -18,7 +18,7 @@
                 <img class="img-logo" src="../images/logo.png" alt="Logo Estante de Lidos">
             </h1>
             <nav>
-                <a class="anunciar" href="anunciar.html">ANUNCIAR</a>
+                <a class="anunciar" href="anunciar.jsp">ANUNCIAR</a>
             </nav>
         </header>
         <main>
@@ -26,7 +26,7 @@
                 <h1 class="titulo">O que você precisa hoje?</h1>
             </div>
             <div class="opcoes">
-                <a class="livro" href="livros.html">
+                <a class="livro" href="livros.jsp">
                     <div>
                         <svg class="svg-livro" width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0.453278" width="54.5467" height="54.5467" rx="27.2734" fill="#79CFFF"/>
@@ -36,7 +36,7 @@
                         <span class="legenda">Românce, ficção, poesia, ciência e muito mais</span>
                     </div>
                 </a>
-                <a class="material" href="materiais.html">
+                <a class="material" href="materiais.jsp">
                     <div>
                         <svg class="svg-material" width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0.453247" width="54.5467" height="54.5467" rx="27.2734" fill="#F3849F"/>

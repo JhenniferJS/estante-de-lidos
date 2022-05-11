@@ -19,7 +19,7 @@
                 <img class="img-logo" src="../images/logo.png" alt="Logo Estante de Lidos">
             </h1>
             <nav>
-                <a class="anunciar" href="anunciar.html">ANUNCIAR</a>
+                <a class="anunciar" href="anunciar.jsp">ANUNCIAR</a>
             </nav>
         </header>
         <main>
@@ -56,7 +56,7 @@
             </svg>
             <div class="conteudo-footer">
                 <h1 class="img-footer">
-                    <img class="img-logo" src=../images/logo.png" alt="Logo Estante de Lidos">
+                    <img class="img-logo" src="../images/logo.png" alt="Logo Estante de Lidos">
                 </h1>
                 <svg class="linha-footer" viewBox="0 0 2 81" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <line x1="1" x2="1" y2="81" stroke="white" stroke-width="2"/>

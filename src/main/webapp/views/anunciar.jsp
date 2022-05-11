@@ -1,8 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-<!DOCTYPE html>
 <html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
@@ -19,11 +17,12 @@
                 <img class="img-logo" src="../images/logo.png" alt="Logo Estante de Lidos">
             </h1>
             <nav>
-                <a class="anunciar" href="anunciar.html">ANUNCIAR</a>
+                <a class="anunciar" href="anunciar.jsp">ANUNCIAR</a>
             </nav>
         </header>
         <main>
-            <form>
+        	<c:url value="/main?action=AddProduto" var="addProduto"/>
+            <form action="${addProduto}" method="post">
                 <fieldset>
                     <legend>O que você deseja anunciar?</legend>
                     <label for="radio-livro" class="label-livro">
