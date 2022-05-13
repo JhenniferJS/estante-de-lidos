@@ -8,17 +8,18 @@
         <meta name="viewport" content="width=device-width">
         <title>Estante de lidos</title>
 
-        <link rel="stylesheet" href="../css/reset.css">
-        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     </head>
     <body>
         <header>
             <h1 class="img-cabecalho">     
-                <img class="img-logo" src="../images/logo.png" alt="Logo Estante de Lidos">
+                <img class="img-logo" src="images/logo.png" alt="Logo Estante de Lidos">
             </h1>
             <nav>
-                <a class="anunciar" href="anunciar.jsp">ANUNCIAR</a>
+            	<c:url value="/main?action=Anunciar" var="anunciar" />
+                <a class="anunciar" href="${anunciar}">ANUNCIAR</a>
             </nav>
         </header>
         <main>
@@ -26,7 +27,8 @@
                 <h1 class="titulo">O que você precisa hoje?</h1>
             </div>
             <div class="opcoes">
-                <a class="livro" href="livros.jsp">
+            	<c:url value="/main?action=LivroList" var="livroList" />
+                <a class="livro" href="${livroList}">
                     <div>
                         <svg class="svg-livro" width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0.453278" width="54.5467" height="54.5467" rx="27.2734" fill="#79CFFF"/>
@@ -36,7 +38,8 @@
                         <span class="legenda">Românce, ficção, poesia, ciência e muito mais</span>
                     </div>
                 </a>
-                <a class="material" href="materiais.jsp">
+                <c:url value="/main?action=MaterialList" var="materialList" />
+                <a class="material" href="${materialList}">
                     <div>
                         <svg class="svg-material" width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0.453247" width="54.5467" height="54.5467" rx="27.2734" fill="#F3849F"/>
@@ -54,7 +57,7 @@
             </svg>
             <div class="conteudo-footer">
                 <h1 class="img-footer">
-                    <img class="img-logo" src="../images/logo.png" alt="Logo Estante de Lidos">
+                    <img class="img-logo" src="images/logo.png" alt="Logo Estante de Lidos">
                 </h1>
                 <svg class="linha-footer" viewBox="0 0 2 81" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <line x1="1" x2="1" y2="81" stroke="white" stroke-width="2"/>

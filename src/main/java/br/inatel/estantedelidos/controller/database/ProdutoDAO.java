@@ -67,8 +67,8 @@ public class ProdutoDAO {
             pst = con.prepareStatement(sql);
             pst.setString(1, tipo);
             rs = pst.executeQuery();
-            while (rs.next()) {
-                Produto produto = new Produto(rs.getString("NomeVendedor"), rs.getString("Telefone"), rs.getString("NomeProduto"), rs.getString("Tipo"), rs.getFloat("Valor"));
+            while (rs.next()) {	
+                Produto produto = new Produto(rs.getString("NomeVendedor"), rs.getString("Telefone"), rs.getString("NomeProduto"), tipo, rs.getFloat("Valor"));
                 listaProduto.add(produto);
             }
         } catch (SQLException ex) {

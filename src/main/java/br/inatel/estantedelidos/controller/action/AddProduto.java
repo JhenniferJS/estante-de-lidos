@@ -37,6 +37,6 @@ public class AddProduto implements Actions {
 		System.out.println("Valor: " + valorProduto);
 		System.out.println("Tipo: " + tipoProduto);
 		
-		return "redirect:views/index.jsp";
+		return "redirect:main?action=Index";
 	}
 }
