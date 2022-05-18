@@ -80,7 +80,7 @@
 			</ul>
 		</c:if>
 		<c:if test="${empty livros}">
-			<h5 align="center">Não há livros cadastrados</h5>
+			<h5 class="titulo" align="center">Não há livros cadastrados</h5>
 		</c:if>
 	</main>
 	<c:if test="${livros.size() >= 4}">

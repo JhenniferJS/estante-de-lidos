@@ -81,7 +81,7 @@
 			</ul>
 		</c:if>
 		<c:if test="${empty materiais}">
-			<h5 align="center">Não há materiais cadastrados</h5>
+			<h5 class="titulo" align="center">Não há materiais cadastrados</h5>
 		</c:if>
 	</main>
 	<c:if test="${materiais.size() >= 4}">
