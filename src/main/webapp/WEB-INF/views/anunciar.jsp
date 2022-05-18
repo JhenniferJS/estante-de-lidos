@@ -50,7 +50,7 @@
                 <input type="submit" value="Salvar" class="enviar">
             </form>
         </main>
-        <footer>
+        <footer class="footer">
             <svg viewBox="0 0 1366 52" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1366 0L0 0L0 52C683 0 1366 52 1366 52V0Z" fill="#FAF4FF"/>
             </svg>

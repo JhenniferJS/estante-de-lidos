@@ -7,13 +7,15 @@ public class Produto {
 	private String nomeProduto;
 	private String tipo;
 	private float valor;
+	private boolean gratis;
 	
-	public Produto(String nomeVendedor, String telefone, String nomeProduto, String tipo, float valor) {
+	public Produto(String nomeVendedor, String telefone, String nomeProduto, String tipo, float valor, boolean gratis) {
 		this.nomeVendedor = nomeVendedor;
 		this.telefone = telefone;
 		this.nomeProduto = nomeProduto;
 		this.tipo = tipo;
 		this.valor = valor;
+		this.gratis = gratis;
 	}
 
 	public String getNomeVendedor() {
@@ -55,6 +57,13 @@ public class Produto {
 	public void setValor(float valor) {
 		this.valor = valor;
 	}
-	
+
+	public boolean isGratis() {
+		return gratis;
+	}
+
+	public void setGratis(boolean gratis) {
+		this.gratis = gratis;
+	}
 }
 

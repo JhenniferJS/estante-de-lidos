@@ -29,7 +29,7 @@ public class ProdutoDAO {
         Connection con = AccessDataBase.connectToDb();
         //comando em SQL
         String sql;
-        sql = "INSERT INTO Produto(nomeVendedor, telefone, nomeProduto, tipo, valor) values (?,?,?,?,?)";
+        sql = "INSERT INTO Produto(nomeVendedor, telefone, nomeProduto, tipo, valor, gratis) values (?,?,?,?,?,?)";
         //comando recebe parametros - consulta dinamica
         try {
             pst = con.prepareStatement(sql);
@@ -37,8 +37,8 @@ public class ProdutoDAO {
             pst.setString(2, novoProduto.getTelefone());
             pst.setString(3, novoProduto.getNomeProduto());
             pst.setString(4, novoProduto.getTipo());
-            if (novoProduto.getValor() != 0) 
-                pst.setFloat(5, novoProduto.getValor());
+            pst.setFloat(5, novoProduto.getValor());
+            pst.setBoolean(6, novoProduto.isGratis());
             pst.execute();
             sucesso = true;
         } catch (SQLException ex) {
@@ -60,7 +60,7 @@ public class ProdutoDAO {
         Connection con = AccessDataBase.connectToDb();
 
         //COMANDO EM SQL
-        String sql = "SELECT nomeVendedor, telefone, nomeProduto, valor FROM Produto WHERE tipo = ?";
+        String sql = "SELECT nomeVendedor, telefone, nomeProduto, valor, gratis FROM Produto WHERE tipo = ?";
         //O comando nao recebe parametros -> consulta estatica (st)
 
         try {
@@ -68,7 +68,8 @@ public class ProdutoDAO {
             pst.setString(1, tipo);
             rs = pst.executeQuery();
             while (rs.next()) {	
-                Produto produto = new Produto(rs.getString("NomeVendedor"), rs.getString("Telefone"), rs.getString("NomeProduto"), tipo, rs.getFloat("Valor"));
+                Produto produto = new Produto(rs.getString("NomeVendedor"), rs.getString("Telefone"), rs.getString("NomeProduto"), tipo, rs.getFloat("Valor"), rs.getBoolean("Gratis"));
+                System.out.println("Gratis: " + rs.getBoolean("Gratis"));
                 listaProduto.add(produto);
             }
         } catch (SQLException ex) {

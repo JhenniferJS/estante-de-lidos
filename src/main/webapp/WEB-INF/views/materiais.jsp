@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -23,7 +24,7 @@
 		</h1>
 		<nav>
 			<c:url value="/main?action=Anunciar" var="anunciar" />
-            <a class="anunciar" href="${anunciar}">ANUNCIAR</a>
+			<a class="anunciar" href="${anunciar}">ANUNCIAR</a>
 		</nav>
 	</header>
 	<main>
@@ -49,11 +50,19 @@
 										d="M37.4021 26.7285C36.8845 27.3926 37.6267 28.8965 38.6912 29.3359C39.1892 29.5508 40.0877 29.5313 40.5759 29.3067C41.6404 28.8281 42.324 27.3926 41.7966 26.7285C41.3865 26.2109 40.5271 26.5234 40.5271 27.207C40.5271 27.3242 40.4099 27.5586 40.2732 27.7246C40.0681 27.9785 39.9509 28.0274 39.5994 28.0274C39.2478 28.0274 39.1306 27.9785 38.9256 27.7246C38.7791 27.5488 38.6716 27.3047 38.6716 27.1387C38.6716 26.4844 37.8123 26.2109 37.4021 26.7285Z"
 										fill="white" />
 	                         </svg>
-								<span class="span-preco">R$ ${material.valor}</span>
+								<c:if test="${material.gratis == true}">
+									<span class="span-preco">Grátis</span>
+								</c:if>
+								<c:if test="${material.gratis == false}">
+									<span class="span-preco">R$ <fmt:formatNumber
+											type="number" maxFractionDigits="2" minFractionDigits="2"
+											value="${material.valor}" /></span>
+								</c:if>
 							</section>
 							<section class="item-contato">
-								<svg class="svg-whats" width="40" height="40" viewBox="0 0 40 40"
-									fill="none" xmlns="http://www.w3.org/2000/svg">
+								<svg class="svg-whats" width="40" height="40"
+									viewBox="0 0 40 40" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
 	                             <path
 										d="M13.9375 1.125C7.12496 3.5625 2.81246 8.125 0.812458 14.9375C-0.375042 19.0625 0.0624582 24.5625 1.81246 28.0625C3.06246 30.5 3.06246 30.5 1.87496 34.75C1.18746 37.125 0.624958 39.1875 0.624958 39.3125C0.624958 39.625 3.56246 39.0625 6.99996 38.125C9.62496 37.375 10.1875 37.375 12.5625 38.5C14.5 39.3125 16.6875 39.6875 20 39.6875C28.125 39.6875 34.625 35.5 38.0625 28.1875C41.4375 21 39.75 11.6875 34.0625 5.9375C28.9375 0.874996 20.375 -1.1875 13.9375 1.125ZM28.875 3.9375C31.9375 5.75 34.9375 8.875 36.6875 12.0625C38.25 14.9375 38.25 25.0625 36.6875 27.9375C34.9375 31.125 31.9375 34.25 28.875 36.0625C24.8125 38.5 17.25 38.875 12.625 36.875C9.56246 35.5625 9.31246 35.5 6.49996 36.5C4.87496 37.0625 3.31246 37.5 3.12496 37.5C2.87496 37.5 3.06246 36 3.62496 34.125C4.49996 30.875 4.49996 30.5625 3.18746 27.5625C1.62496 23.9375 1.43746 17.3125 2.74996 13.5625C4.43746 9 8.87496 4.5 13.5625 2.75C15.125 2.1875 17.75 1.9375 21 2.0625C25.125 2.25 26.5625 2.5625 28.875 3.9375Z"
 										fill="white" />
@@ -71,29 +80,59 @@
 				</c:forEach>
 			</ul>
 		</c:if>
+		<c:if test="${empty materiais}">
+			<h5 align="center">Não há materiais cadastrados</h5>
+		</c:if>
 	</main>
-	<footer>
-		<svg viewBox="0 0 1366 52" fill="none"
-			xmlns="http://www.w3.org/2000/svg">
-                <path d="M1366 0L0 0L0 52C683 0 1366 52 1366 52V0Z"
-				fill="#FAF4FF" />
-            </svg>
-		<div class="conteudo-footer">
-			<h1 class="img-footer">
-				<img class="img-logo" src="images/logo.png"
-					alt="Logo Estante de Lidos">
-			</h1>
-			<svg class="linha-footer" viewBox="0 0 2 81" fill="none"
+	<c:if test="${materiais.size() >= 4}">
+		<footer class="footer-2">
+			<svg viewBox="0 0 1366 52" fill="none"
 				xmlns="http://www.w3.org/2000/svg">
-                    <line x1="1" x2="1" y2="81" stroke="white"
-					stroke-width="2" />
-                </svg>
-			<section class="endereco-footer">
-				<p class="conteudo-endereco">Av. João de Camargo, 510</p>
-				<p class="conteudo-endereco">Centro, Santa Rita do Sapucaí, MG</p>
-				<p class="conteudo-endereco">37540-000</p>
-			</section>
-		</div>
-	</footer>
+		                <path d="M1366 0L0 0L0 52C683 0 1366 52 1366 52V0Z"
+					fill="#FAF4FF" />
+		            </svg>
+			<div class="conteudo-footer">
+				<h1 class="img-footer">
+					<img class="img-logo" src="images/logo.png"
+						alt="Logo Estante de Lidos">
+				</h1>
+				<svg class="linha-footer" viewBox="0 0 2 81" fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+		                    <line x1="1" x2="1" y2="81" stroke="white"
+						stroke-width="2" />
+		                </svg>
+				<section class="endereco-footer">
+					<p class="conteudo-endereco">Av. João de Camargo, 510</p>
+					<p class="conteudo-endereco">Centro, Santa Rita do Sapucaí, MG</p>
+					<p class="conteudo-endereco">37540-000</p>
+				</section>
+			</div>
+		</footer>
+	</c:if>
+	<c:if test="${materiais.size() < 4}">
+		<footer class="footer">
+			<svg viewBox="0 0 1366 52" fill="none"
+				xmlns="http://www.w3.org/2000/svg">
+		                <path d="M1366 0L0 0L0 52C683 0 1366 52 1366 52V0Z"
+					fill="#FAF4FF" />
+		            </svg>
+			<div class="conteudo-footer">
+				<h1 class="img-footer">
+					<img class="img-logo" src="images/logo.png"
+						alt="Logo Estante de Lidos">
+				</h1>
+				<svg class="linha-footer" viewBox="0 0 2 81" fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+		                    <line x1="1" x2="1" y2="81" stroke="white"
+						stroke-width="2" />
+		                </svg>
+				<section class="endereco-footer">
+					<p class="conteudo-endereco">Av. João de Camargo, 510</p>
+					<p class="conteudo-endereco">Centro, Santa Rita do Sapucaí, MG</p>
+					<p class="conteudo-endereco">37540-000</p>
+				</section>
+			</div>
+		</footer>
+	</c:if>
 </body>
 </html>

@@ -18,11 +18,20 @@ public class AddProduto implements Actions {
 		
 		String nomeProduto = request.getParameter("produto-nome");
 		String tipoProduto = request.getParameter("produto-tipo");
-		float valorProduto = Float.parseFloat(request.getParameter("produto-valor"));
+		String valor = request.getParameter("produto-valor");
+		float valorProduto = 0f;
+		if(!valor.isEmpty()) {
+			valorProduto = Float.parseFloat(valor);
+		}
 		String nomeVendedor = request.getParameter("vendedor-nome");
 		String telefone = request.getParameter("telefone");
+		String gratis = request.getParameter("produto-gratis");
+		boolean isGratis = false;
+		if(gratis != null) {
+			isGratis = true;
+		}
 		
-		Produto produto = new Produto(nomeVendedor, telefone, nomeProduto, tipoProduto, valorProduto);
+		Produto produto = new Produto(nomeVendedor, telefone, nomeProduto, tipoProduto, valorProduto, isGratis);
 		ProdutoDAO produtoDAO = new ProdutoDAO();
 		try {
 			produtoDAO.inserirProduto(produto);
